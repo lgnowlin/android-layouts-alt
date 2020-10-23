@@ -49,4 +49,11 @@
         <item name="backgroundTint">@android:color/white</item>
     </style>
 
+    <style name="CardView.Header" parent="Widget.AppCompat.TextView">
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Subhead </item>
+        <item name="android:textColor">@color/grey_40</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
 </resources>

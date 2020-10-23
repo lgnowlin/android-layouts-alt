@@ -20,7 +20,7 @@
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:chipSpacingHorizontal="10dp">
+                app:chipSpacingHorizontal="@dimen/spacing_middle">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip6"
@@ -63,41 +63,146 @@
         <androidx.cardview.widget.CardView
             style="@style/CardView.White"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:padding="@dimen/spacing_middle">
 
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="@dimen/spacing_xxlarge"
+                    android:layout_height="@dimen/spacing_xxlarge"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_phone_android"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chip4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:chipIcon="@drawable/ic_lightbulb"/>
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pulsa_amp_data"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/imageView4"
+                    app:layout_constraintTop_toTopOf="@id/imageView4"
+                    app:layout_constraintBottom_toTopOf="@id/textView4"/>
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chip5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:chipIcon="@drawable/ic_monetization_on"/>
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chip10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:chipIcon="@drawable/ic_games"/>
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bonus_pulsa_50"
+                    android:textSize="15dp"
+                    android:textColor="@color/red_400"
+                    app:layout_constraintLeft_toRightOf="@id/imageView4"
+                    app:layout_constraintTop_toBottomOf="@id/textView3"
+                    app:layout_constraintBottom_toBottomOf="@id/imageView4"/>
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chip11"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:chipIcon="@drawable/ic_more_horiz"/>
-                </com.google.android.material.chip.ChipGroup>
-            </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_cal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/buy_now"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imageView4"
+                    app:layout_constraintBottom_toBottomOf="@id/imageView4"/>
+
+                <TextView
+                    android:id="@+id/electric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electric"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/grey_40"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="@dimen/spacing_xxlarge"
+                    android:layout_height="@dimen/spacing_xxlarge"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_monetization_on"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@id/imageView"/>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="@dimen/spacing_xxlarge"
+                    android:layout_height="@dimen/spacing_xxlarge"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_lightbulb"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="@dimen/spacing_xxlarge"
+                    android:layout_height="@dimen/spacing_xxlarge"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_games"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imageView1"
+                    app:layout_constraintTop_toTopOf="@id/imageView1"/>
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/spacing_xxlarge"
+                    android:layout_height="@dimen/spacing_xxlarge"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_more_horiz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@id/imageView2" />
+
+                <TextView
+                    android:id="@+id/cashout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cashout"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/grey_40"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView1"
+                    app:layout_constraintStart_toStartOf="@+id/imageView1"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+                <TextView
+                    android:id="@+id/games"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/games"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/grey_40"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="@+id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                <TextView
+                    android:id="@+id/seeall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seeall"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/grey_40"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.cardview.widget.CardView>
 
         <com.google.android.material.button.MaterialButtonToggleGroup
@@ -108,11 +213,15 @@
             app:singleSelection="true">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/noDiscount"
+                style="@style/Button.Blue.Group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/no_discount"></com.google.android.material.button.MaterialButton>
 
             <com.google.android.material.button.MaterialButton
+                style="@style/Button.Blue.Group"
+                android:id="@+id/Discount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/discount"></com.google.android.material.button.MaterialButton>
@@ -120,7 +229,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -128,16 +237,28 @@
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/CardView.Header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_middle"
+                    android:text="@string/invoice"
+                    tools:ignore="MissingConstraints" />
 
                 <CheckBox
                     android:id="@+id/checkBox"
                     style="@style/CheckBox.Blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Product 01"
+                    android:text="@string/product1"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    app:layout_constraintBottom_toBottomOf="@+id/TextBox1"
+                    app:layout_constraintTop_toTopOf="@+id/TextBox1"
                     tools:ignore="MissingConstraints" />
 
                 <CheckBox
@@ -145,8 +266,10 @@
                     style="@style/CheckBox.Blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Product 02"
+                    android:text="@string/product2"
                     app:layout_constraintTop_toBottomOf="@+id/checkBox"
+                    app:layout_constraintBottom_toBottomOf="@+id/TextBox2"
+                    app:layout_constraintTop_toTopOf="@+id/TextBox2"
                     tools:ignore="MissingConstraints" />
 
                 <CheckBox
@@ -154,8 +277,10 @@
                     style="@style/CheckBox.Blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Product 03"
+                    android:text="@string/product3"
                     app:layout_constraintTop_toBottomOf="@+id/checkBox2"
+                    app:layout_constraintBottom_toBottomOf="@+id/TextBox3"
+                    app:layout_constraintTop_toTopOf="@+id/TextBox3"
                     tools:ignore="MissingConstraints" />
 
                 <CheckBox
@@ -163,29 +288,38 @@
                     style="@style/CheckBox.Blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Product 04"
+                    android:text="@string/product4"
                     app:layout_constraintTop_toBottomOf="@+id/checkBox3"
+                    app:layout_constraintBottom_toBottomOf="@+id/TextBox4"
+                    app:layout_constraintTop_toTopOf="@+id/TextBox4"
                     tools:ignore="MissingConstraints" />
 
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideline2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" />
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="@dimen/spacing_xxlarge"
+                    android:layout_height="@dimen/spacing_xxlarge"
+                    android:padding="@dimen/spacing_middle"
+                    android:src="@drawable/ic_swap_vert"
+                    android:rotation="45"
+                    android:layout_gravity="end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
                 <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/TextBox1"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                    android:id="@+id/TextBox1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageView5">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/text1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="hint" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/TextBox2"
                     android:layout_width="100dp"
@@ -197,7 +331,7 @@
                         android:id="@+id/text2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="hint" />
+                        android:inputType="numberDecimal"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -211,7 +345,7 @@
                         android:id="@+id/text3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="hint" />
+                        android:inputType="numberDecimal"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -225,7 +359,7 @@
                         android:id="@+id/text4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="hint" />
+                        android:inputType="numberDecimal"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -233,9 +367,16 @@
 
         <com.google.android.material.button.MaterialButton
             style="Button.Outlined.White"
-            android:layout_width="195dp"
+            android:layout_width="@dimen/nav_header_height"
             android:layout_height="wrap_content"
             android:text="@string/calculate_total_btn" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
 
     </LinearLayout>
 </ScrollView>
