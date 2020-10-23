@@ -246,9 +246,16 @@
                     style="@style/CardView.Header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/spacing_middle"
+                    android:padding="@dimen/spacing_small"
                     android:text="@string/invoice"
                     tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView"
+                    android:text="_________________________________________________________" />
 
                 <CheckBox
                     android:id="@+id/checkBox"
@@ -256,7 +263,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/product1"
-                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
                     app:layout_constraintBottom_toBottomOf="@+id/TextBox1"
                     app:layout_constraintTop_toTopOf="@+id/TextBox1"
                     tools:ignore="MissingConstraints" />
@@ -311,7 +318,7 @@
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imageView5">
+                    app:layout_constraintTop_toBottomOf="@id/textView2">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/text1"
@@ -372,7 +379,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_cal"
-                style="Button.Outlined.White"
+                style="@style/Button.Outlined.White"
                 android:layout_width="@dimen/nav_header_height"
                 android:layout_height="wrap_content"
                 android:text="@string/calculate_total_btn" />
