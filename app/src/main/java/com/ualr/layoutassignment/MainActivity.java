@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         if (DiscountBtn.isChecked())
             Total *= .75;
 
-        String totalTextMsg = String.format("Total: $%f", Total);
+        String totalTextMsg = String.format("Total: $%.2f", Total);
 
         totalText.setText(totalTextMsg);
     }
